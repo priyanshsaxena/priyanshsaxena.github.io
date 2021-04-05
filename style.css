@@ -1,0 +1,99 @@
+body {
+    font-family: 'Noto Sans', Arial, serif;
+    font-weight: 400;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height: 1.618em;
+    background: #464646 url('images/background.jpg') center center no-repeat fixed;
+    background-size: cover;
+}
+
+h2 {
+    font-family: 'Noto Sans', Arial, serif;
+    font-weight: 700;
+    font-size:40px;
+    line-height: 1.618em;
+}
+
+section {
+    max-width:800px;
+    margin:8% auto 1em auto;
+    background-color:#222;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    color:#fff;
+    padding:1em 5%;
+}
+
+a {
+    color: #00CC66;
+}
+
+a:focus {
+    outline:none;
+    outline-offset:inherit;
+}
+
+#redirection-message-timer {
+    color: red;
+}
+
+#countdown {
+  position: relative;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+}
+
+#countdown-number {
+  color: white;
+  display: inline-block;
+  line-height: 60px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 173px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: white;
+  fill: none;
+  animation: countdown 10s linear infinite forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 173px;
+  }
+}
+
+@media (max-device-width: 1027px) {
+    body {
+        text-align:center;
+        font-size:larger;
+    }
+    section {
+        max-width: 90%;
+    }
+}
+
+@media (max-device-width: 640px) {
+    section {
+        max-width: 97%;
+    }
+}
